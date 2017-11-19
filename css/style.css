@@ -333,7 +333,7 @@ footer div:nth-child(1) a{
     color: #ff5d5e;
     border-radius: .2rem;
     background-color: #fdef8a;
-    box-shadow: 0 8px 0 0 #e0c81c;
+    box-shadow: 0 3px 0 0 #e0c81c;
 }
 footer div:nth-child(1) a:nth-child(1){
     left: .6rem;
