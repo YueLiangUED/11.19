@@ -1,0 +1,58 @@
+html,body{
+    background-color: #4ac8d8;
+}
+main>div{
+    padding-top: 1.93rem;
+    width: 7.5rem;
+    height: 12.07rem;
+    background: url("../images/bacBg.png") center no-repeat;
+    background-size: cover;
+}
+main>div div:nth-child(1){
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto .26rem;
+    padding: .76rem .2rem;
+    width: 7rem;
+    height: 7.98rem;
+    border-radius: .2rem;
+    background-color: #ffffff;
+}
+main>div div>span{
+    position: absolute;
+    top: -1.15rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 6.29rem;
+    height: 1.81rem;
+    background: url("../images/jlTitle.png") center no-repeat;
+    background-size: cover;
+}
+main>div div ul{
+    width: 100%;
+    height: 6.8rem;
+    overflow: scroll;
+}
+main>div div ul li{
+    margin-bottom: .15rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: .7rem;
+    border-bottom: 2px dashed #7cd8e3;
+}
+main>div div ul li span{
+    margin-right: .3rem;
+    font-size: .28rem;
+    color: #7cd8e3;
+    line-height: .7rem;
+}
+main>div div ul li span:last-child{
+    margin-right: 0;
+}
+main>div .footer{
+    width: 7.5rem;
+    height: 1.76rem;
+    background: url("../images/footerBg.png") center no-repeat;
+    background-size: cover;
+}

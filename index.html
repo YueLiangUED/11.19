@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>北京移动</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div></div>
+    <div class="scrollBox">
+        <ul>
+            <li>
+                恭喜<span>13651312162</span>
+                抽中<span>一等奖话费50元</span>
+            </li>
+            <li>
+                恭喜<span>13651312162</span>
+                抽中<span>二等奖本地流量1GB</span>
+            </li>
+            <li>
+                恭喜<span>13651312162</span>
+                抽中<span>三等奖本地流量100MB</span>
+            </li>
+            <li>
+                恭喜<span>13651312162</span>
+                抽中<span>四等奖本地流量10MB</span>
+            </li>
+        </ul>
+    </div>
+    <div class="yun1"></div>
+    <div class="yun2"></div>
+</header>
+<main>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="rotateTarget">
+        <li>
+            <div>
+                <p>二等奖</p>
+                <span></span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>一等奖</p>
+                <span></span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>三等奖</p>
+                <span></span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <p>四等奖</p>
+                <span></span>
+            </div>
+        </li>
+    </ul>
+    <div id="starBtn"></div>
+</main>
+<footer>
+    <div>
+        <a id="jl" href="index1.html">中奖纪录</a>
+        <a id="gz" href="index2.html">活动规则</a>
+    </div>
+    <div></div>
+</footer>
+</body>
+</html>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    function autoScroll(obj){
+        $(obj).find("ul").animate({
+            marginTop : "-.55rem"
+        },500,function(){
+            $(this).css({marginTop : "0px"}).find("li:first").appendTo(this);
+        });
+    }
+    $(function () {
+        setInterval('autoScroll(".scrollBox")',2000);
+    });
+</script>
