@@ -53,7 +53,17 @@ $(function () {
             }
         }, 4000);
     }
-    
+    //隐藏手机号中间4位
+    var $phoneNum = $('.scrollBox ul li span:nth-child(1)');
+    function hidePhoneNum(phoneNum) {
+        $.each(phoneNum,function (i,e) {
+            var val = e.innerText;
+            var hideNum = val.substr(3,4);
+            e.innerText = val.replace(hideNum,'****');
+        });
+    }
+    hidePhoneNum($phoneNum);
+    //转盘灯
     setInterval(function () {
         $('main>span').addClass('active');
     },1000);
