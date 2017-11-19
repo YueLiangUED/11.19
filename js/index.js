@@ -12,11 +12,15 @@ $(function () {
         cat = 90,
         num = 0,
         offOn = true,
-        temp = 0;
+        temp = 0,
+        flag = 0;
     $starBtn.click(function() {
-        if(offOn) {
+        if(offOn && flag === 0) {
             offOn = !offOn;
             ratating();
+            flag ++;
+        }else if(flag > 0){
+            showTc_2();
         }
     });
     function ratating() {
@@ -31,23 +35,50 @@ $(function () {
             num = (rdm + temp) % 360;
             temp += rdm;
             if(num <= cat * 1) {
-                alert("2等奖");
+                $('#jpText_1').text('获得了二等奖');
+                $('#jpText_2').text('1GB本地流量');
+                showTc_1();
             } else if(num <= cat * 2) {
-                alert("3等奖");
+                $('#jpText_1').text('获得了三等奖');
+                $('#jpText_2').text('100MB本地流量');
+                showTc_1();
             } else if(num <= cat * 3) {
-                alert("4等奖");
+                $('#jpText_1').text('获得了四等奖');
+                $('#jpText_2').text('10MB本地流量');
+                showTc_1();
             } else if(num <= cat * 4) {
-                alert("1等奖");
+                $('#jpText_1').text('获得了一等奖');
+                $('#jpText_2').text('50元话费');
+                showTc_1();
             }
         }, 4000);
     }
-
-    //首页提交按钮
-    $('#submitBtn').on('click',function (e) {
-        /*do something*/
-        e.preventDefault();
-        $('.model').fadeIn(); //显示弹窗
-        showMask(); //显示遮罩层
+    
+    setInterval(function () {
+        $('main>span').addClass('active');
+    },1000);
+    setInterval(function () {
+        $('main>span').removeClass('active');
+    },2000);
+    //显示中奖弹窗
+    function showTc_1() {
+        $('.tc.zj').fadeIn();
+        showMask();
+    }
+    //显示参与过弹窗
+    function showTc_2() {
+        $('.tc.cy').fadeIn();
+        showMask();
+    }
+    //显示活动结束弹窗
+    function showTc_3() {
+        $('.tc.end').fadeIn();
+        showMask();
+    }
+    //弹窗确定按钮关闭当前弹窗
+    $('.tcBtn').on('click',function () {
+        $(this).parent().fadeOut();
+        hideMask();
     });
     //弹窗确定按钮
     $('#tcBtn').on('click',function (e) {
