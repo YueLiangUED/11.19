@@ -2,6 +2,7 @@ html,body{
     background-color: #4ac8d8;
 }
 main>div{
+    box-sizing: border-box;
     padding-top: 1.93rem;
     width: 7.5rem;
     height: 12.07rem;
