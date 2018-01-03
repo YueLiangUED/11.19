@@ -52,8 +52,24 @@ main>div div ul li span:last-child{
     margin-right: 0;
 }
 main>div .footer{
+    position: relative;
     width: 7.5rem;
     height: 1.76rem;
     background: url("../images/footerBg.png") center no-repeat;
     background-size: cover;
+}
+main>div .footer a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 2.68rem;
+    height: .61rem;
+    font-size: .36rem;
+    text-align: center;
+    line-height: .61rem;
+    border-radius: .5rem;
+    color: #fffefe;
+    background-color: #ff5f5f;
 }
